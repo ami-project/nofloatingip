@@ -29,7 +29,7 @@ parameters:
   floatingip:
     type: string
     label: checkout floating ip
-    desc: Set floating ip to vm
+    description: Set floating ip to vm
     default: true
 
 condition:

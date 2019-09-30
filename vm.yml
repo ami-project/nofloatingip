@@ -32,7 +32,7 @@ parameters:
     description: Set floating ip to vm
     default: true
 
-condition:
+conditions:
   get_floating_ip: {equals : [{get_param: floatingip}, true]}
 
 resources:

@@ -22,6 +22,11 @@ parameters:
     type: string
     label: Private Network
     description: Setup Private network
+  public_network:
+    type: string
+    label: Public network name or ID
+    description: Public network to attach server to.
+    default: Public_Network
   username:
     type: string
     label: Set Username
@@ -30,10 +35,10 @@ parameters:
     type: string
     label: checkout floating ip
     description: Set floating ip to vm
-    default: "1"
+    default: true
 
 conditions:
-  get_floating_ip: {equals : [{get_param: floatingip}, "1"]}
+  get_floating_ip: {equals : [{get_param: floatingip}, true]}
 
 resources:
   secgroup:
